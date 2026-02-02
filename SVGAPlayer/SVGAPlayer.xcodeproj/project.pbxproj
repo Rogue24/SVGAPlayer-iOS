@@ -199,7 +199,8 @@
 				904D41F61D223DD20085A21A /* SVGABezierPath.h */,
 				904D41F71D223DD20085A21A /* SVGABezierPath.m */,
 			);
-			path = Source;
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 		90D7C9FA1F7E2AA3006E74F0 /* Samples */ = {
