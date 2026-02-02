@@ -3,20 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002178BE2F30B27F009676F8 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 002178BD2F30B27F009676F8 /* SwiftProtobuf */; };
-		002178C02F30B27F009676F8 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 002178BF2F30B27F009676F8 /* SwiftProtobufPluginLibrary */; };
-		002178C32F30B31D009676F8 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 002178C22F30B31D009676F8 /* ZipArchive */; };
 		63712E6521787950001AE014 /* heartbeat.svga in Resources */ = {isa = PBXBuildFile; fileRef = 63712E6421787950001AE014 /* heartbeat.svga */; };
 		71418C93225E6F710029C69E /* mutiMatte.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71418C92225E6F710029C69E /* mutiMatte.svga */; };
 		718A146D235718E000FED5D3 /* Rocket.svga in Resources */ = {isa = PBXBuildFile; fileRef = 718A146C235718E000FED5D3 /* Rocket.svga */; };
 		71A8679122B7785100176CD6 /* matteRect.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71A8679022B7785100176CD6 /* matteRect.svga */; };
 		71A8679322B7853600176CD6 /* matteBitmap.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71A8679222B7853600176CD6 /* matteBitmap.svga */; };
 		71DAA8A52355B3ED006608A1 /* Goddess.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71DAA8A42355B3ED006608A1 /* Goddess.svga */; };
-		74705C01F071FDD5615D5542 /* Pods_SVGAPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249900EE2AFF4E7DD5670EBF /* Pods_SVGAPlayer.framework */; };
 		90A676E21D13A6DF008A69F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A676E11D13A6DF008A69F3 /* main.m */; };
 		90A676E51D13A6DF008A69F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A676E41D13A6DF008A69F3 /* AppDelegate.m */; };
 		90A676E81D13A6DF008A69F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A676E71D13A6DF008A69F3 /* ViewController.m */; };
@@ -31,14 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		249900EE2AFF4E7DD5670EBF /* Pods_SVGAPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVGAPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63712E6421787950001AE014 /* heartbeat.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.svga; sourceTree = "<group>"; };
 		71418C92225E6F710029C69E /* mutiMatte.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = mutiMatte.svga; sourceTree = "<group>"; };
 		718A146C235718E000FED5D3 /* Rocket.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rocket.svga; sourceTree = "<group>"; };
 		71A8679022B7785100176CD6 /* matteRect.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = matteRect.svga; sourceTree = "<group>"; };
 		71A8679222B7853600176CD6 /* matteBitmap.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = matteBitmap.svga; sourceTree = "<group>"; };
 		71DAA8A42355B3ED006608A1 /* Goddess.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Goddess.svga; sourceTree = "<group>"; };
-		8AD65028FA2D122A34DC4A63 /* Pods-SVGAPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGAPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SVGAPlayer/Pods-SVGAPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		90A676DD1D13A6DF008A69F3 /* SVGAPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGAPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A676E11D13A6DF008A69F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90A676E31D13A6DF008A69F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,7 +47,6 @@
 		90D7CA191F7FB114006E74F0 /* rose_2.0.0.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = rose_2.0.0.svga; sourceTree = "<group>"; };
 		90D7CA1A1F7FB114006E74F0 /* rose_1.5.0.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = rose_1.5.0.svga; sourceTree = "<group>"; };
 		90D7CA1D1F7FB34E006E74F0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		E02B8713B25C0283C736EE03 /* Pods-SVGAPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGAPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SVGAPlayer/Pods-SVGAPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		E83A58D8247E0E6A00D9F404 /* audio_biling.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio_biling.svga; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,32 +55,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002178C32F30B31D009676F8 /* ZipArchive in Frameworks */,
-				002178C02F30B27F009676F8 /* SwiftProtobufPluginLibrary in Frameworks */,
 				90D7CA1E1F7FB34E006E74F0 /* libz.tbd in Frameworks */,
-				74705C01F071FDD5615D5542 /* Pods_SVGAPlayer.framework in Frameworks */,
-				002178BE2F30B27F009676F8 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		431B19F0F45A7844195F461A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8AD65028FA2D122A34DC4A63 /* Pods-SVGAPlayer.debug.xcconfig */,
-				E02B8713B25C0283C736EE03 /* Pods-SVGAPlayer.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		90A676D41D13A6DF008A69F3 = {
 			isa = PBXGroup;
 			children = (
 				90A676DF1D13A6DF008A69F3 /* SVGAPlayer */,
 				90A676DE1D13A6DF008A69F3 /* Products */,
-				431B19F0F45A7844195F461A /* Pods */,
 				B8EE95EA56FFE89CDEC9D8C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -146,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				90D7CA1D1F7FB34E006E74F0 /* libz.tbd */,
-				249900EE2AFF4E7DD5670EBF /* Pods_SVGAPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -392,17 +370,13 @@
 		};
 		90A676F51D13A6DF008A69F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD65028FA2D122A34DC4A63 /* Pods-SVGAPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = S2RM275849;
 				INFOPLIST_FILE = SVGAPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opensource.SVGAPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -412,17 +386,13 @@
 		};
 		90A676F61D13A6DF008A69F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E02B8713B25C0283C736EE03 /* Pods-SVGAPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = S2RM275849;
 				INFOPLIST_FILE = SVGAPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opensource.SVGAPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -452,43 +422,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-protobuf.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.27.0;
-			};
-		};
-		002178C12F30B31D009676F8 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
-			requirement = {
-				kind = exactVersion;
-				version = 2.6.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		002178BD2F30B27F009676F8 /* SwiftProtobuf */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobuf;
-		};
-		002178BF2F30B27F009676F8 /* SwiftProtobufPluginLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobufPluginLibrary;
-		};
-		002178C22F30B31D009676F8 /* ZipArchive */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 002178C12F30B31D009676F8 /* XCRemoteSwiftPackageReference "ZipArchive" */;
-			productName = ZipArchive;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90A676D51D13A6DF008A69F3 /* Project object */;
 }
