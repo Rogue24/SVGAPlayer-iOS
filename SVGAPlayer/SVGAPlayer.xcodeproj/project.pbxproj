@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002178BE2F30B27F009676F8 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 002178BD2F30B27F009676F8 /* SwiftProtobuf */; };
+		002178C02F30B27F009676F8 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 002178BF2F30B27F009676F8 /* SwiftProtobufPluginLibrary */; };
+		002178C32F30B31D009676F8 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 002178C22F30B31D009676F8 /* ZipArchive */; };
 		63712E6521787950001AE014 /* heartbeat.svga in Resources */ = {isa = PBXBuildFile; fileRef = 63712E6421787950001AE014 /* heartbeat.svga */; };
 		71418C93225E6F710029C69E /* mutiMatte.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71418C92225E6F710029C69E /* mutiMatte.svga */; };
 		718A146D235718E000FED5D3 /* Rocket.svga in Resources */ = {isa = PBXBuildFile; fileRef = 718A146C235718E000FED5D3 /* Rocket.svga */; };
@@ -59,8 +62,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002178C32F30B31D009676F8 /* ZipArchive in Frameworks */,
+				002178C02F30B27F009676F8 /* SwiftProtobufPluginLibrary in Frameworks */,
 				90D7CA1E1F7FB34E006E74F0 /* libz.tbd in Frameworks */,
 				74705C01F071FDD5615D5542 /* Pods_SVGAPlayer.framework in Frameworks */,
+				002178BE2F30B27F009676F8 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +198,8 @@
 				Base,
 			);
 			mainGroup = 90A676D41D13A6DF008A69F3;
+			packageReferences = (
+			);
 			productRefGroup = 90A676DE1D13A6DF008A69F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,7 +399,10 @@
 				DEVELOPMENT_TEAM = S2RM275849;
 				INFOPLIST_FILE = SVGAPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.opensource.SVGAPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -408,7 +419,10 @@
 				DEVELOPMENT_TEAM = S2RM275849;
 				INFOPLIST_FILE = SVGAPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.opensource.SVGAPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -438,6 +452,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.27.0;
+			};
+		};
+		002178C12F30B31D009676F8 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		002178BD2F30B27F009676F8 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		002178BF2F30B27F009676F8 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002178BC2F30B27F009676F8 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		002178C22F30B31D009676F8 /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002178C12F30B31D009676F8 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90A676D51D13A6DF008A69F3 /* Project object */;
 }
