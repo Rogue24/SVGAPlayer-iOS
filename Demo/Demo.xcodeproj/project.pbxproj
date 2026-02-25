@@ -14,6 +14,7 @@
 		000083432F3DFA37002DEA35 /* SVGAPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 000083422F3DFA37002DEA35 /* SVGAPlayer */; };
 		000083462F3DFAD7002DEA35 /* SVGAPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 000083452F3DFAD7002DEA35 /* SVGAPlayer */; };
 		000083492F3E0077002DEA35 /* SVGAPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 000083482F3E0077002DEA35 /* SVGAPlayer */; };
+		00BC91DF2F4ECCFB00F27210 /* SVGAPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 00BC91DE2F4ECCFB00F27210 /* SVGAPlayer */; };
 		63712E6521787950001AE014 /* heartbeat.svga in Resources */ = {isa = PBXBuildFile; fileRef = 63712E6421787950001AE014 /* heartbeat.svga */; };
 		71418C93225E6F710029C69E /* mutiMatte.svga in Resources */ = {isa = PBXBuildFile; fileRef = 71418C92225E6F710029C69E /* mutiMatte.svga */; };
 		718A146D235718E000FED5D3 /* Rocket.svga in Resources */ = {isa = PBXBuildFile; fileRef = 718A146C235718E000FED5D3 /* Rocket.svga */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BC91DF2F4ECCFB00F27210 /* SVGAPlayer in Frameworks */,
 				000083432F3DFA37002DEA35 /* SVGAPlayer in Frameworks */,
 				000083402F3DF8BE002DEA35 /* SVGAPlayer in Frameworks */,
 				0000833A2F3DBD13002DEA35 /* SVGAPlayer in Frameworks */,
@@ -187,7 +189,7 @@
 			);
 			mainGroup = 90A676D41D13A6DF008A69F3;
 			packageReferences = (
-				000083472F3E0077002DEA35 /* XCLocalSwiftPackageReference "../../SVGAPlayer-iOS" */,
+				00BC91DD2F4ECCFB00F27210 /* XCLocalSwiftPackageReference "../../SVGAPlayer-iOS" */,
 			);
 			productRefGroup = 90A676DE1D13A6DF008A69F3 /* Products */;
 			projectDirPath = "";
@@ -398,7 +400,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		000083472F3E0077002DEA35 /* XCLocalSwiftPackageReference "../../SVGAPlayer-iOS" */ = {
+		00BC91DD2F4ECCFB00F27210 /* XCLocalSwiftPackageReference "../../SVGAPlayer-iOS" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../SVGAPlayer-iOS";
 		};
@@ -430,6 +432,10 @@
 			productName = SVGAPlayer;
 		};
 		000083482F3E0077002DEA35 /* SVGAPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SVGAPlayer;
+		};
+		00BC91DE2F4ECCFB00F27210 /* SVGAPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SVGAPlayer;
 		};
