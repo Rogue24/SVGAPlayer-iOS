@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "SVGAPlayer",
     platforms: [
-        .iOS(.v12)
+        // 为了兼容ZipArchive更为稳定的版本，最低版本改成从iOS15.5起（https://github.com/ZipArchive/ZipArchive/releases/tag/2.5.0）
+        .iOS("15.5")
     ],
     products: [
         .library(
@@ -19,7 +20,7 @@ let package = Package(
         .package(
             url: "https://github.com/ZipArchive/ZipArchive.git",
 //            exact: "2.4.3" // 指定 2.4.3
-            from: "2.0.0" // >= 2.0.0 且 < 3.0.0
+            from: "2.5.0" // >= 2.5.0 且 < 3.0.0
         ),
     ],
     targets: [

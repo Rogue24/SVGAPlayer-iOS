@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ZipArchive/ZipArchive.git",
       "state" : {
-        "revision" : "38e0ce0598e06b034271f296a8e15b149c91aa19",
-        "version" : "2.4.3"
+        "revision" : "df35718ea19a94e015b91dc4881dee028ce4cdba",
+        "version" : "2.6.0"
       }
     }
   ],
