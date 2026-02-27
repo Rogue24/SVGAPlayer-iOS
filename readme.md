@@ -10,6 +10,31 @@ This repository is forked from the original SVGAPlayer. Future bug fixes, compat
 
 The original .pb files in this repository have been regenerated using protoc version 29.3 to ensure compatibility and maintainability.
 
+## Swift Package Manager Support
+
+本仓库现已支持 Swift Package Manager（需引用 `SPM` 分支）。该分支内置了 Protobuf 3.29.5 版本源码，以避免外部依赖带来的兼容性问题，并提升整体稳定性。同时，由于依赖了兼容性更稳定的 ZipArchive 版本，最低系统要求为 iOS 15.5 及以上。
+
+This repository now supports Swift Package Manager (via the `SPM` branch). This branch includes built-in Protobuf 3.29.5 source code to avoid compatibility issues caused by external dependencies and improve overall stability. Due to the use of a more stable ZipArchive version, the minimum deployment target is iOS 15.5 or later.
+
+**SPM usage example:**
+
+```swift
+// Package.swift
+.dependencies: [
+    .package(url: "https://github.com/Rogue24/SVGAPlayer-iOS.git", branch: "SPM")
+]
+```
+
+Or add this URL in Xcode:
+
+```swift
+https://github.com/Rogue24/SVGAPlayer-iOS.git
+```
+
+and select the `SPM` branch.
+
+-------------------------- 以下是原仓库的README内容 --------------------------
+
 # Archived
 本仓库已经停止维护，你仍然继续阅读源码及创建分叉，但本仓库不会继续更新，也不会回答任何 issue。
 
