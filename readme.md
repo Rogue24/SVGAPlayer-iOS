@@ -1,3 +1,15 @@
+# Fork Notice
+
+本仓库是从原始 SVGAPlayer fork 下来的版本。后续如遇到 bug 修复、兼容性问题修复或相关功能更新，都会持续在本仓库发布和维护。如果对你有帮助，欢迎 Star 支持。
+ 
+This repository is forked from the original SVGAPlayer. Future bug fixes, compatibility fixes, and related updates will be continuously maintained and released here. If this project helps you, please consider giving it a Star.
+
+## Protocol Buffers Update
+
+本仓库已使用 protoc 29.3 版本重新生成原有的 .pb 相关文件，以确保兼容性和后续维护。
+
+The original .pb files in this repository have been regenerated using protoc version 29.3 to ensure compatibility and maintainability.
+
 # Archived
 本仓库已经停止维护，你仍然继续阅读源码及创建分叉，但本仓库不会继续更新，也不会回答任何 issue。
 
