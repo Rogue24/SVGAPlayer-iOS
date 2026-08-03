@@ -217,7 +217,7 @@ static NSOperationQueue *unzipQueue;
     if (![SVGAParser isZIPData:data]) {
         // Maybe is SVGA 2.0.0
         [parseQueue addOperationWithBlock:^{
-            NSData *inflateData = [self zlibInflate:data];
+            NSData *inflateData = [SVGAParser zlibInflate:data];
             NSError *err;
             SVGAProtoMovieEntity *protoObject = [SVGAProtoMovieEntity parseFromData:inflateData error:&err];
             if (!err && [protoObject isKindOfClass:[SVGAProtoMovieEntity class]]) {
@@ -373,8 +373,7 @@ static NSOperationQueue *unzipQueue;
             ];
 }
 
-- (NSData *)zlibInflate:(NSData *)data
-{
++ (NSData *)zlibInflate:(NSData *)data {
     if ([data length] == 0) return data;
     
     unsigned full_length = (unsigned)[data length];
@@ -415,6 +414,33 @@ static NSOperationQueue *unzipQueue;
         return [NSData dataWithData: decompressed];
     }
     else return nil;
+}
+
++ (SVGAVideoEntity *)parseWithData:(NSData *)data {
+    return [self parseWithData:data error:nil];
+}
+
++ (SVGAVideoEntity *)parseWithData:(NSData *)data error:(NSError **)error {
+    if (!data || data.length < 4) {
+        return nil;
+    }
+    
+    if ([SVGAParser isZIPData:data]) {
+        return nil;
+    }
+    
+    NSData *inflateData = [self zlibInflate:data];
+    SVGAProtoMovieEntity *protoObject = [SVGAProtoMovieEntity parseFromData:inflateData error:error];
+    if (error != nil || ![protoObject isKindOfClass:[SVGAProtoMovieEntity class]]) {
+        return nil;
+    }
+    
+    SVGAVideoEntity *videoItem = [[SVGAVideoEntity alloc] initWithProtoObject:protoObject cacheDir:@""];
+    [videoItem resetImagesWithProtoObject:protoObject];
+    [videoItem resetSpritesWithProtoObject:protoObject];
+    [videoItem resetAudiosWithProtoObject:protoObject];
+    
+    return videoItem;
 }
 
 @end

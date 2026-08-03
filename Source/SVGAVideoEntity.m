@@ -153,14 +153,21 @@ static dispatch_semaphore_t videoSemaphore;
     NSMutableDictionary<NSString *, NSData *> *audiosData = [[NSMutableDictionary alloc] init];
     NSDictionary *protoImages = [protoObject.images copy];
     for (NSString *key in protoImages) {
-        NSString *fileName = [[NSString alloc] initWithData:protoImages[key] encoding:NSUTF8StringEncoding];
+        NSString *fileName = self.cacheDir.length > 0 ? [[NSString alloc] initWithData:protoImages[key] encoding:NSUTF8StringEncoding] : nil;
         if (fileName != nil) {
             NSString *filePath = [self.cacheDir stringByAppendingFormat:@"/%@.png", fileName];
-            if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-                filePath = [self.cacheDir stringByAppendingFormat:@"/%@", fileName];
-            }
             if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-//                NSData *imageData = [NSData dataWithContentsOfFile:filePath];
+                NSData *imageData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:NULL];
+                if (imageData != nil) {
+                    UIImage *image = [[UIImage alloc] initWithData:imageData scale:2.0];
+                    if (image != nil) {
+                        [images setObject:image forKey:key];
+                    }
+                }
+                continue;
+            }
+            filePath = [self.cacheDir stringByAppendingFormat:@"/%@", fileName];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
                 NSData *imageData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:NULL];
                 if (imageData != nil) {
                     UIImage *image = [[UIImage alloc] initWithData:imageData scale:2.0];

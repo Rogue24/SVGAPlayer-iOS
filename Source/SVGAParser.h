@@ -32,4 +32,17 @@
        completionBlock:(void ( ^ _Nullable)(SVGAVideoEntity * _Nonnull videoItem))completionBlock
           failureBlock:(void ( ^ _Nullable)(NSError * _Nonnull error))failureBlock;
 
+/// 同步解析
+/// - Parameters:
+///   - data: SVGA文件数据
+/// - Returns: SVGA资源对象
++ (nullable SVGAVideoEntity *)parseWithData:(nonnull NSData *)data;
+
+/// 同步解析
+/// - Parameters:
+///   - data: SVGA文件数据
+///   - error: 解析错误
+/// - Returns: SVGA资源对象
++ (nullable SVGAVideoEntity *)parseWithData:(nonnull NSData *)data error:(NSError * _Nullable * _Nullable)error;
+
 @end
