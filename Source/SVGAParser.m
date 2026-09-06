@@ -15,14 +15,21 @@
 
 #define ZIP_MAGIC_NUMBER "PK"
 
-@interface SVGAParser ()
-
-@end
-
 @implementation SVGAParser
 
 static NSOperationQueue *parseQueue;
 static NSOperationQueue *unzipQueue;
+
+/// 统一构造解析失败回调：切主线程调用，与文件内其他 failureBlock 的回调时机一致；
+/// code 沿用本文件既有的 4xx 风格（已占用 404 / 411），reason 会写进 NSLocalizedDescriptionKey 便于排查
+static void SVGAParseFailure(void (^_Nullable failureBlock)(NSError * _Nonnull), NSInteger code, NSString *reason) {
+    if (!failureBlock) return;
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        failureBlock([NSError errorWithDomain:@"SVGAParser" code:code userInfo:@{
+            NSLocalizedDescriptionKey: reason.length > 0 ? reason : @"unknown"
+        }]);
+    }];
+}
 
 + (void)load {
     parseQueue = [NSOperationQueue new];
@@ -173,6 +180,9 @@ static NSOperationQueue *unzipQueue;
                         }];
                     }
                 }
+                else {
+                    SVGAParseFailure(failureBlock, 417, @"movie.spec is not a valid dictionary.");
+                }
             }
             else {
                 if (failureBlock) {
@@ -212,6 +222,7 @@ static NSOperationQueue *unzipQueue;
         return;
     }
     if (!data || data.length < 4) {
+        SVGAParseFailure(failureBlock, 415, @"Invalid SVGA data.");
         return;
     }
     if (![SVGAParser isZIPData:data]) {
@@ -235,6 +246,9 @@ static NSOperationQueue *unzipQueue;
                         completionBlock(videoItem);
                     }];
                 }
+            }
+            else {
+                SVGAParseFailure(failureBlock, 416, err.localizedDescription ?: @"Inflate or proto parse failed.");
             }
         }];
         return ;
@@ -320,6 +334,9 @@ static NSOperationQueue *unzipQueue;
                                             completionBlock(videoItem);
                                         }];
                                     }
+                                }
+                                else {
+                                    SVGAParseFailure(failureBlock, 417, @"movie.spec is not a valid dictionary.");
                                 }
                             }
                             else {
@@ -431,7 +448,7 @@ static NSOperationQueue *unzipQueue;
     
     NSData *inflateData = [self zlibInflate:data];
     SVGAProtoMovieEntity *protoObject = [SVGAProtoMovieEntity parseFromData:inflateData error:error];
-    if (error != nil || ![protoObject isKindOfClass:[SVGAProtoMovieEntity class]]) {
+    if ((error != nil && *error != nil) || ![protoObject isKindOfClass:[SVGAProtoMovieEntity class]]) {
         return nil;
     }
     

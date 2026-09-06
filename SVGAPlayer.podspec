@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SVGAPlayer"
-  s.version      = "2.5.9"
+  s.version      = "2.6.0" # 基于原版的【v2.5.7】，后续比这个版本号高的都是我改动过的。
   s.summary      = "SVGAPlayer 是一个高性能的动画播放器"
   s.description  = <<-DESC
                    SVGA 是一种全新的动画格式，由 YY UED 团队主导开发；
